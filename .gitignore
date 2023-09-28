@@ -1,6 +1,9 @@
 # vscode
 .vscode
 
+# challenge folder
+challenge/
+
 # build output
 dist/
 
