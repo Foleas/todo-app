@@ -1,9 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import ThemeModeSwitcher from "../components/common/ThemeModeSwitcher";
+import TaskList from "../components/Tasklist";
 ---
 
 <Layout title="TODO APP - Challenge">
-	<main>
-	
-	</main>
+  <main
+    class="dark:bg-darkTheme-veryDarkBlue bg-lightTheme-veryLightGray relative h-screen w-screen overflow-hidden transition-colors"
+  >
+    <div
+      class="header xsm:bg-[url('/images/bg-desktop-light.jpg')] xsm:dark:bg-[url('/images/bg-desktop-dark.jpg')] absolute left-0 top-0 z-0 h-[38vh] w-screen bg-[url('/images/bg-mobile-light.jpg')] bg-cover bg-center bg-no-repeat transition-[background] dark:bg-[url('/images/bg-mobile-dark.jpg')]"
+    >
+    </div>
+
+    <div class="content-wrapper relative h-full">
+      <div class="content relative ml-auto mr-auto w-full max-w-[540px] py-16">
+        <div class="content-header mb-14 flex items-center justify-between">
+          <h1
+            class="text-uppercase text-[48px] font-bold leading-none tracking-[15px] text-white"
+          >
+            TODO
+          </h1>
+          <ThemeModeSwitcher client:only />
+        </div>
+
+        <div class="app">
+          <TaskList client:visible />
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
