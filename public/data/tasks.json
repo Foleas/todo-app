@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Complete online Javascript course",
+    "createdAt": 1690213112756,
+    "completed": true
+  },
+  {
+    "id": 2,
+    "title": "Jog around the park 3x",
+    "createdAt": 1690213113756,
+    "completed": false
+  },
+  {
+    "id": 3,
+    "title": "10 minutes meditation",
+    "createdAt": 1690213114756,
+    "completed": false
+  },
+  {
+    "id": 4,
+    "title": "Read for 1 hour",
+    "createdAt": 1690213115756,
+    "completed": false
+  },
+  {
+    "id": 5,
+    "title": "Pick up groceries",
+    "createdAt": 1690213116756,
+    "completed": false
+  },
+  {
+    "id": 6,
+    "title": "Complete Todo App on Frontend Mentor",
+    "createdAt": 1690213117756,
+    "completed": false
+  }
+]
