@@ -1,0 +1,13 @@
+{
+  "tailwindConfig": "./tailwind.config.cjs",
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "pluginSearchDirs": ["."],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}
