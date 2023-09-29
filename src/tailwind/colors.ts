@@ -6,7 +6,7 @@ export const tailwindCustomColors = {
     veryLightGrayishBlue: "hsl(236, 33%, 92%)",
     lightGrayishBlue: "hsl(233, 11%, 84%)",
     darkGrayishBlue: "hsl(236, 9%, 61%)",
-    veryDarkGrayisBlue: "hsl(235, 19%, 35%)",
+    veryDarkGrayishBlue: "hsl(235, 19%, 35%)",
   },
   darkTheme: {
     veryDarkBlue: "hsl(235, 21%, 11%)",
