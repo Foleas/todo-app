@@ -1,6 +1,5 @@
 export const tailwindCustomColors = {
   brightBlue: "hsl(220, 98%, 61%)",
-  checkGradient: "linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)",
   lightTheme: {
     veryLightGray: "hsl(0, 0%, 98%)",
     veryLightGrayishBlue: "hsl(236, 33%, 92%)",

@@ -12,7 +12,6 @@ module.exports = {
       },
       colors: {
         brightBlue: tailwindCustomColors.brightBlue,
-        checkGradient: tailwindCustomColors.checkGradient,
         lightTheme: tailwindCustomColors.lightTheme,
         darkTheme: tailwindCustomColors.darkTheme,
       },
