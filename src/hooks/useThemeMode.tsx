@@ -2,14 +2,9 @@ import { useEffect, useState } from "react";
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage";
 
 export const useThemeMode = () => {
-  const [theme, setTheme] = useState<string | null>(null);
-
-  useEffect(() => {
-    const colorThemeLocalStorage = getLocalStorage("theme")
-      ? getLocalStorage("theme")
-      : "light";
-    setTheme(colorThemeLocalStorage as string);
-  }, []);
+  const [theme, setTheme] = useState<string>(
+    getLocalStorage("theme") as string,
+  );
 
   useEffect(() => {
     const root = window.document.documentElement;

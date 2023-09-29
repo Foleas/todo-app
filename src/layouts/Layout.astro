@@ -6,8 +6,29 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en" class="dark">
+<script>
+  import { getLocalStorage, setLocalStorage } from "../utils/localStorage";
+
+  const getUserModePreference = (): string => {
+    if ("matchMedia" in window) {
+      const prefersDarkMode = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      return prefersDarkMode ? "dark" : "light";
+    }
+    return "light";
+  };
+
+  const themeMode = getLocalStorage("theme")
+    ? (getLocalStorage("theme") as string)
+    : getUserModePreference();
+  setLocalStorage("theme", themeMode);
+  window.document.documentElement.classList.add(themeMode);
+  document.body.classList.remove("opacity-0");
+  document.body.classList.add("opacity-100");
+</script>
+
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -22,15 +43,21 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="opacity-0 transition-opacity delay-75 duration-75">
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-light-gray: hsl(0, 0%, 98%);
   }
   html {
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
+    background-color: var(--very-light-gray);
+  }
+  html.dark {
+    background-color: var(--very-dark-blue);
   }
 </style>
